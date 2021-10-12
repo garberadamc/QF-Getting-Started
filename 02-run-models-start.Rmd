@@ -9,22 +9,32 @@ output:
 ---
 
 ```{r setup, include=FALSE}
+
 knitr::opts_chunk$set(echo = TRUE, eval = FALSE, message = FALSE, warning = FALSE)
-library(here);library(glue)
+
 ```
 
 # --------------------------------------------------------------------------------------
 
 ## Outline
    
-1.  create an R project (on your computers desktop or in a designated project folder)
-2.  install & load packages
-3.  read in data to R
-4.  view data in R
-5.  view metadata (from SPSS files)
-6.  write .sav / .csv / .dat files
-7.  fix character names to have less than 8 character 
-8. introduction to mplusObjects
+1.  Create a new `R Project` (on your computers desktop or in a designated project folder)
+2.  Downloading a project repository from Github
+3.  Install & load packages
+4.  Read in data to R
+5.  View data in R
+6.  View metadata (from SPSS files)
+7.  Write `.sav` , `.csv` , and `.dat` files
+8.  Fix character names to have less than 8 character 
+9.  Introduction to the "mplusObject method"
+10. Run a first model using `MplusAutomation`
+
+# -------------------------------------------------------------------------------------- 
+
+## Getting started repository:
+
+https://github.com/garberadamc/QF-Getting-Started
+
 
 # -------------------------------------------------------------------------------------- 
 
