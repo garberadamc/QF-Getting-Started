@@ -222,7 +222,7 @@ Model is `type = BASIC;` (i.e., returns descriptive statistics)
 
 ## Always check your model!
 
-- In the RStudio window pane on the `bottom-right`under the `files` tab click on the `basic_mplus` folder
+- In the RStudio window pane on the `bottom-right`under the `files` tab click on the `mplus_files` folder
 - There should be 3 new files in this location that were produced by `mplusModeler()`
 - Click on the output file (`.out`) to check if the model estimated or if there are any error messages
 
