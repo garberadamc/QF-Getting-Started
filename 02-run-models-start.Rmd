@@ -25,9 +25,8 @@ knitr::opts_chunk$set(echo = TRUE, eval = FALSE, message = FALSE, warning = FALS
 5.  View metadata (from SPSS files)
 6.  Prepare data 
 7.  Write `.sav` , `.csv` , and `.dat` files
-8.  Fix character names to have less than 8 character 
-9.  Introduce the "mplusObject Method"
-10. Run a first model using `MplusAutomation`
+8.  Introduce the "mplusObject Method"
+9. Run a first model using `MplusAutomation`
 
 # -------------------------------------------------------------------------------------- 
 
