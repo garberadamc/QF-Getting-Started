@@ -108,7 +108,7 @@ here()
 ## Prepare data: **Remove SPSS labels**
 
 Write a `.csv` data file (preferable format for reading into R)
-```{r}
+```{r,eval=FALSE}
 
 # write_csv(data_name, here("sub_folder", data_name.csv"))
 
@@ -128,7 +128,7 @@ nolabel_data <- read_csv(here("data", "exp_data.csv"))
 Write a `.dat` file using the `prepareMplusData()`
 
 NOTE: This function removes the column header row and converts missing values to a period (.)
-```{r}
+```{r,eval=FALSE}
 
 # prepareMplusData(new_data_name, here("sub_folder", "data_name.dat"))
 
@@ -199,12 +199,34 @@ Within an `mplusObject()`:
 
 # --------------------------------------------------------------------------------------
 
-## Create an `mplusObject()` & `mplusModeler()` template 
+## Create a template for `mplusObject()` & `mplusModeler()` functions
 
 ```{r}
 
+m_template  <- mplusObject(
+  
+  TITLE = 
+    "", 
+  
+  VARIABLE = 
+    "",
+  
+  ANALYSIS = 
+    "",
+  
+  PLOT = 
+    "",
+  
+  OUTPUT = 
+    "",
+ 
+  usevariables = colnames(), 
+  rdata =  )
 
-
+m_template_fit <- mplusModeler(m_template, 
+                  dataout=here("", ".dat"),
+                  modelout=here("", ".inp"),
+                  check=TRUE, run = TRUE, hashfilename = FALSE)
 
 ```
 
@@ -213,10 +235,29 @@ Within an `mplusObject()`:
 ## Run a first model using the `mplusObject()` method 
 
 Model is `type = BASIC;` (i.e., returns descriptive statistics)
-```{r}
+```{r,eval=FALSE}
 
+m_basic  <- mplusObject(
+  
+  TITLE = "PRACTICE 01 - Explore TYPE = BASIC", 
+  
+  VARIABLE = 
+ "usevar=
+  item1 item2 item3 item4 item5
+  item6 item7 item8 item9 female; 
+  
+  ! use exclamation symbol to make comments, reminders, or annotations in Mplus files ",
+  
+  ANALYSIS = 
+ "type = basic; ",
+ 
+  usevariables = colnames(nolabel_data), 
+  rdata = nolabel_data)
 
-
+m_basic_fit <- mplusModeler(m_basic, 
+               dataout=here("mplus_files", "basic.dat"),
+               modelout=here("mplus_files", "basic.inp"),
+               check=TRUE, run = TRUE, hashfilename = FALSE)
 
 ```
 
