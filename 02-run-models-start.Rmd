@@ -112,7 +112,7 @@ Write a `.csv` data file (preferable format for reading into R)
 
 # write_csv(data_name, here("sub_folder", data_name.csv"))
 
-write_csv(exp_data, here("data", "exp_data.csv"))
+
 
 ```
 
@@ -121,7 +121,7 @@ Read the unlabeled `.csv` data back into R
 
 # new_data_name <- read_csv(here("sub_folder", "data_name.csv"))
 
-nolabel_data <- read_csv(here("data", "exp_data.csv"))
+
 
 ```
 
@@ -132,7 +132,7 @@ NOTE: This function removes the column header row and converts missing values to
 
 # prepareMplusData(new_data_name, here("sub_folder", "data_name.dat"))
 
-prepareMplusData(nolabel_data, here("data", "exp_data.dat"))
+
 
 ```
 
