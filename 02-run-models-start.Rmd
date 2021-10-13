@@ -18,8 +18,8 @@ knitr::opts_chunk$set(echo = TRUE, eval = FALSE, message = FALSE, warning = FALS
 
 ## Outline
    
-1.  Create a new `R Project` (on your computers desktop or in a designated project folder)
-2.  Downloading a project repository from Github
+1.  Create a new `R Project` 
+2.  Download a project repository from Github
 3.  Install & load packages
 4.  Read in data to R
 5.  View metadata (from SPSS files)
